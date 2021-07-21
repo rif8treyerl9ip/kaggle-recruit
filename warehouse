@@ -1,0 +1,44 @@
+https://note.nkmk.me/python-pandas-time-series-multiindex/
+
+https://note.nkmk.me/python-pandas-time-series-datetimeindex/
+
+v.index.weekday
+は
+v.set_index("date",inplace=True)
+を使用してindexにセットしないとそもそも曜日をとってくることができないが、
+v.date.dt.dayofweek
+ならSeriesの曜日をとってくることができてワイドフォーマットにする必要がない
+
+
+v.dow = v.date.dt.dayofweek
+でなく
+v['dow'] = v.date.dt.dayofweek
+でないと新規列として追加できないっぽい
+
+
+
+aggregation = {'visitors' : 'median'}
+v.groupby(['air_store_id','dow']).agg(aggregation).reset_index()
+
+
+正規表現
+
+*
+直前の正規表現を 0 回以上、できるだけ多く繰り返したものにマッチさせる
+結果の正規表現にします。例えば ab* は 'a'、'ab'、または 'a' に任意個数の 'b' を続けたものにマッチします。
+
+
+メタ文字を単なる普通の文字として検索したい場合は、それらメタ文字の前に
+\を付加しなければなりません。下記の例のように。
+なお、\ 自体は、\\と書きます。
+
+# glob.glob('')に適切なファイルのパスを指定してください
+# 文中の：は{キー：値}の：関数の返り血を柔軟にキーや値に割り当てられるということ
+dfs = {re.search('/([^/\.]*)\.csv', fn).group(1):pd.read_csv(
+    fn) for fn in glob.glob('./../input/*.csv')}
+for k, v in dfs.items(): locals()[k] = v
+ 
+# # 読み込んだファイルを確認
+print('data frames read:{}'.format(list(dfs.keys())))
+ 
+# dataframesread:['air_store_info', 'date_info', 'store_id_relation', 'hpg_reserve', 'air_reserve', 'air_visit_data', 'sample_submission', 'hpg_store_info']

@@ -1,0 +1,8 @@
+*csv
+*gz
+
+# notebooks以下
+notebooks/others/*.py
+notebooks/others/*.ipynb
+notebooks/others/*.Rmd
+notebooks/.ipynb_checkpoints/*.ipynb
