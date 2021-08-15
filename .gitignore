@@ -1,8 +1,13 @@
 *csv
 *gz
+.vscode/
+src/
+
 
 # notebooks以下
+# notebooks/m/*.py
 notebooks/others/*.py
 notebooks/others/*.ipynb
 notebooks/others/*.Rmd
 notebooks/.ipynb_checkpoints/*.ipynb
+notebooks/others/kaggle-recruit-restaurant
