@@ -9,5 +9,16 @@ src/
 notebooks/others/*.py
 notebooks/others/*.ipynb
 notebooks/others/*.Rmd
+notebooks/m/0720first eda.ipynb
+notebooks/m/0721second_eda.ipynb
+notebooks/m/0813_baseline_0.72.ipynb
+notebooks/m/0814_baseline_0.72.ipynb
+notebooks/m/0720first_eda.ipynb
+notebooks/m/08152_baseline_cv除外.ipynb
+notebooks/m/08152_baseline_plus_m_of_と統計量y.ipynb
+notebooks/m/1222_baseline.ipynb
+notebooks/m/1226eda.ipynb
+notebooks/m/watch.ipynb
+
 notebooks/.ipynb_checkpoints/*.ipynb
 notebooks/others/kaggle-recruit-restaurant
