@@ -1,5 +1,3 @@
-https://www.kaggle.com/c/recruit-restaurant-visitor-forecasting
-
 #### 概要
 
 &nbsp;&nbsp;リクルートが提供するレビューサービスやPOSデータを活用し、未来のレストラン訪問者数を正確に予測するコンペティション
